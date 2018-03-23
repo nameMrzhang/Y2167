@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <!--数据源
+            连接参数-->
+            <dataSource type="POOLED">
+                <!--驱动-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <!--连接字符串-->
+                <property name="url" value="jdbc:mysql:///Y2167?serverTimezone=GMT%2B8"/>
+                <!--用户名-->
+                <property name="username" value="root"/>
+                <!--密码-->
+                <property name="password" value=""/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="cn/dao/IBookDAO.xml"/>
+    </mappers>
+</configuration>
